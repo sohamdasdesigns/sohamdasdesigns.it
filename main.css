@@ -1,0 +1,46 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    background: #f3f3f3;
+}
+
+html,
+body
+{
+    /* overflow: hidden; */
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+
+.section
+{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    font-family: 'Tangerine', cursive;
+    color: #252525;
+    /* text-transform: uppercase; */
+    font-size: 45px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* section:nth-child(odd)
+{
+    justify-content: flex-end;
+} */
+
+/*# sourceMappingURL=main.css.map*/
