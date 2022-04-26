@@ -77,6 +77,39 @@ body
     justify-content: flex-end;
 } */
 
+  /* Title hover function */
+
+  .tooltip-title {
+    position: relative;
+    display: inline-block;
+    text-shadow:  0px 0px 10px rgb(175, 235, 232);
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltip-title .tooltiptext-title {
+    opacity: 0;
+    width: 800px;
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: -900px;
+    font-size: 26px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    transition: 0.8s;
+  }
+  
+  .tooltip-title:hover .tooltiptext-title {
+    opacity: 1;
+    
+  }
 
 /* Project image hover fucntion */
 
@@ -100,11 +133,14 @@ body
     z-index: 1;
     top: 80px;
     right: 105%;
+    box-shadow: 0 4px 8px 0 rgba(175, 235, 232, 0.2),0 6px 20px 0 rgba(175, 235, 232, 0.19);
   }
   
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
+
+  /* Desciption */
 
   .tooltip-desc {
     position: relative;
@@ -114,8 +150,8 @@ body
   }
   
   .tooltip-desc .tooltiptext-desc {
-    visibility: hidden;
-    width: 500px;
+    opacity: 0;
+    width: 530px;
     /* background-color: black; */
     color: rgb(0, 0, 0);
     text-align: left;
@@ -125,15 +161,17 @@ body
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    top: 48px;
-    right: -450px;
+    top: 55px;
+    right: -480px;
     font-size: 28px;
     line-height: 35px;
     letter-spacing: 1px;
+    transition: 0.8s;
   }
   
   .tooltip-desc:hover .tooltiptext-desc {
-    visibility: visible;
+    opacity: 1;
+    
   }
 
 
