@@ -27,6 +27,9 @@ body
   animation: fadeInAnimation ease 5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+
+  padding-top: 18px;
+  padding-left: 32px;
 }
 @keyframes fadeInAnimation {
   0% {
@@ -189,6 +192,88 @@ body
     
   }
 
+  /* Description buttion for popup window */
+
+  .getLife-button {
+    background-color: #1c87c9;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: rgba(255, 226, 29, .5);
+    /* border-style: outset; */
+    color: #070707;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+    padding: -5px -5px;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+  }
+  @keyframes glowing {
+    0% {
+      background-color: rgba(255, 226, 29, .2);
+      box-shadow: 0 0 5px rgba(255, 226, 29, .2);
+    }
+    50% {
+      background-color: rgba(255, 226, 29, .6);
+      box-shadow: 0 0 20px rgba(255, 226, 29, .6);
+    }
+    100% {
+      background-color: rgba(255, 226, 29, .2);
+      box-shadow: 0 0 5px rgba(255, 226, 29, .2)
+    }
+  }
+  .getLife-button {
+    animation: glowing 3s infinite;
+  }
+  .getLife-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+      font-size: 27px;
+  }
+
+
+   /* Description buttion for popup window */
+
+   .ttil-button {
+    background-color: #1c87c9;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: rgba(255, 226, 29, .5);
+    /* border-style: outset; */
+    color: #070707;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+    padding: -5px -5px;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+  }
+  @keyframes glowing {
+    0% {
+      background-color: rgba(255, 226, 29, .2);
+      box-shadow: 0 0 5px rgba(255, 226, 29, .2);
+    }
+    50% {
+      background-color: rgba(255, 226, 29, .6);
+      box-shadow: 0 0 20px rgba(255, 226, 29, .6);
+    }
+    100% {
+      background-color: rgba(255, 226, 29, .2);
+      box-shadow: 0 0 5px rgba(255, 226, 29, .2)
+    }
+  }
+  .ttil-button {
+    animation: glowing 3s infinite;
+  }
+  .ttil-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+      font-size: 27px;
+  }
 
   /* Pop-up click function */
 
@@ -248,6 +333,11 @@ body
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+
+
+
+
+
 
 
 /*# sourceMappingURL=main.css.map*/
