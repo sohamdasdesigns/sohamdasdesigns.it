@@ -57,6 +57,13 @@ const mesh1 = new THREE.Mesh(
     new THREE.IcosahedronGeometry( .75 , 0),
     material
 )
+
+// Il Bosco Non c`e
+const mesh6 = new THREE.Mesh(
+    new THREE.OctahedronGeometry( .75, 0),
+    material
+)
+
 // Il Bosco Non c`e
 const mesh2 = new THREE.Mesh(
     new THREE.OctahedronGeometry( .75, 0),
@@ -94,7 +101,7 @@ const meshBackGround = new THREE.Mesh(
     material2
 )
 
-scene.add(mesh1, mesh2, mesh3, mesh4, mesh5, meshBackGround)
+scene.add(mesh1, mesh6, mesh2, mesh3, mesh4, mesh5, meshBackGround)
 
 // var loader = new THREE.FontLoader();
 
@@ -128,21 +135,23 @@ scene.add(mesh1, mesh2, mesh3, mesh4, mesh5, meshBackGround)
 const objectsDistance = 4
 
 mesh1.position.x = 2
+mesh6.position.x = 2
 mesh2.position.x = 2
 mesh3.position.x = 2
 mesh4.position.x = 2
 mesh5.position.x = 2
 
 mesh1.position.y = - objectsDistance * 0
-mesh2.position.y = - objectsDistance * 1
-mesh3.position.y = - objectsDistance * 2
-mesh4.position.y = - objectsDistance * 3
-mesh5.position.y = - objectsDistance * 4
+mesh6.position.y = - objectsDistance * 1
+mesh2.position.y = - objectsDistance * 2
+mesh3.position.y = - objectsDistance * 3
+mesh4.position.y = - objectsDistance * 4
+mesh5.position.y = - objectsDistance * 5
 
 meshBackGround.position.x = - 3
 meshBackGround.position.y = - 20
 
-const sectionMeshes = [ mesh1, mesh2, mesh3, mesh4, mesh5, meshBackGround ]
+const sectionMeshes = [ mesh1, mesh6, mesh2, mesh3, mesh4, mesh5, meshBackGround ]
 
 /**
  * Particles
