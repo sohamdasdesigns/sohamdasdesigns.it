@@ -1,0 +1,363 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    background: rgb(243, 243, 243);
+}
+
+html,
+body
+{
+    /* overflow: hidden; */
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.section-title .name-tag {
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  padding-top: 18px;
+  padding-left: 32px;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.section-title
+{
+    display: flex;
+    align-items: center;
+    height: 99vh;
+    position: relative;
+    font-family: 'Tangerine', cursive;
+    color: #252525;
+    text-shadow: 0px 0px 2px rgb(175, 235, 232, 0.3) ;
+    /* text-transform: uppercase; */
+    font-size: 45px;
+    /* line-height: 120%;  */
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.section
+{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    font-family: 'Tangerine', cursive;
+    color: #252525;
+    text-shadow: 0px 0px 2px rgb(175, 235, 232, 0.3) ;
+    /* text-transform: uppercase; */
+    font-size: 45px;
+    line-height: 120%; 
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.section-quote
+{
+    /* display: flex; */
+    align-items: left;
+    text-align: left;
+    height: 100vh;
+    width: 50%;
+    position: relative;
+    padding-bottom: 10%;
+    font-family: 'Tangerine', cursive;
+    color: #252525;
+    text-shadow: 0px 0px 2px rgb(175, 235, 232, 0.3) ;
+    /* text-transform: uppercase; */
+    font-size: 38px;
+    line-height: 40px; 
+    padding-left: 10%;
+    padding-right: 10%;
+    transition: 2s;
+}
+
+.section-quote:hover {
+  /* display: flex; */
+  align-items: left;
+  text-align: left;
+  height: 100vh;
+  width: 50%;
+  position: relative;
+  padding-bottom: 8%;
+  /* font-family: monospace ; */
+  font-family: 'Source Code Pro', monospace;
+  color: #252525;
+  text-shadow: 0px 0px 2px rgb(175, 235, 232, 0.3) ;
+  /* text-transform: uppercase; */
+  font-size: 20px;
+  line-height: 28px; 
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+/* section:nth-child(odd)
+{
+    justify-content: flex-end;
+} */
+
+  /* Title hover function */
+
+  .tooltip-title {
+    position: relative;
+    display: inline-block;
+    text-shadow:  0px 0px 10px rgb(175, 235, 232);
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltip-title .tooltiptext-title {
+    opacity: 0;
+    width: 800px;
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: -900px;
+    font-size: 26px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    transition: 0.8s;
+  }
+  
+  .tooltip-title:hover .tooltiptext-title {
+    opacity: 1;
+    
+  }
+
+/* Project image hover fucntion */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    right: 105%;
+    box-shadow: 0 4px 8px 0 rgba(175, 235, 232, 0.2),0 6px 20px 0 rgba(175, 235, 232, 0.19);
+    
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* Desciption */
+
+  .tooltip-desc {
+    position: relative;
+    display: inline-block;
+    text-shadow:  0px 0px 10px rgb(175, 235, 232);
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltip-desc .tooltiptext-desc {
+    opacity: 0;
+    width: 530px;
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 55px;
+    right: -480px;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    transition: 0.8s;
+  }
+  
+  .tooltip-desc:hover .tooltiptext-desc {
+    opacity: 1;
+    
+  }
+
+  /* Description buttion for popup window */
+
+  .getLife-button {
+    background-color: #1c87c9;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: rgba(255, 226, 29, .5);
+    /* border-style: outset; */
+    color: #070707;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+    padding: -5px -5px;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+  }
+  @keyframes glowing {
+    0% {
+      background-color: rgba(255, 226, 29, .2);
+      box-shadow: 0 0 5px rgba(255, 226, 29, .2);
+    }
+    50% {
+      background-color: rgba(255, 226, 29, .6);
+      box-shadow: 0 0 20px rgba(255, 226, 29, .6);
+    }
+    100% {
+      background-color: rgba(255, 226, 29, .2);
+      box-shadow: 0 0 5px rgba(255, 226, 29, .2)
+    }
+  }
+  .getLife-button {
+    animation: glowing 3s infinite;
+  }
+  .getLife-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+      font-size: 27px;
+  }
+
+
+   /* Description buttion for popup window */
+
+   .ttil-button {
+    background-color: #1c87c9;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: rgba(255, 226, 29, .5);
+    /* border-style: outset; */
+    color: #070707;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+    padding: -5px -5px;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+  }
+  @keyframes glowing {
+    0% {
+      background-color: rgba(255, 226, 29, .2);
+      box-shadow: 0 0 5px rgba(255, 226, 29, .2);
+    }
+    50% {
+      background-color: rgba(255, 226, 29, .6);
+      box-shadow: 0 0 20px rgba(255, 226, 29, .6);
+    }
+    100% {
+      background-color: rgba(255, 226, 29, .2);
+      box-shadow: 0 0 5px rgba(255, 226, 29, .2)
+    }
+  }
+  .ttil-button {
+    animation: glowing 3s infinite;
+  }
+  .ttil-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+      font-size: 27px;
+  }
+
+  /* Pop-up click function */
+
+  /* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+
+
+
+
