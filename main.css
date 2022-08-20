@@ -127,7 +127,7 @@ body
   }
   
   .tooltip-title .tooltiptext-title {
-    opacity: 0;
+    opacity: 0.1;
     width: 800px;
     /* background-color: black; */
     color: rgb(0, 0, 0);
@@ -182,16 +182,31 @@ body
   }
 
   /* Desciption */
+  @keyframes glowingDesc {
+    20% {
+      /* background-color: rgba(175, 235, 232, .2); */
+      text-shadow: 0 0 10px rgba(21, 218, 208, 0.2);
+    }
+    50% {
+      /* background-color: rgba(175, 235, 232, .6); */
+      text-shadow: 0 0 30px rgba(21, 218, 208, 0.6);
+    }
+    100% {
+      /* background-color: rgba(175, 235, 232, .2); */
+      text-shadow: 0 0 10px rgba(21, 218, 208)
+    }
+  }
 
   .tooltip-desc {
     position: relative;
     display: inline-block;
+    animation: glowingDesc 3s infinite;
     text-shadow:  0px 0px 10px rgb(175, 235, 232);
     /* border-bottom: 1px dotted black; */
   }
   
   .tooltip-desc .tooltiptext-desc {
-    opacity: 0;
+    opacity: 0.1;
     width: 530px;
     /* background-color: black; */
     color: rgb(0, 0, 0);
