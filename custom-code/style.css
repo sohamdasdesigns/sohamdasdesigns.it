@@ -13,7 +13,24 @@ html,
 body
 {
     /* overflow: hidden; */
+    min-width: 940px;
 }
+
+#footer--img {
+  position: fixed;
+  display: flex;
+  top: 90%;
+  left: 90%;
+  
+}
+
+#footers--img {
+  display: flex;  
+  width: 50px; 
+  padding: px;
+}
+
+
 
 .webgl
 {
@@ -46,11 +63,12 @@ body
     align-items: center;
     height: 99vh;
     position: relative;
-    font-family: 'Tangerine', cursive;
+    /* font-family: 'Tangerine', cursive; */
+    font-family: 'Poiret One', cursive;
     color: #252525;
     text-shadow: 0px 0px 2px rgb(175, 235, 232, 0.3) ;
     /* text-transform: uppercase; */
-    font-size: 45px;
+    font-size: 40px;
     /* line-height: 120%;  */
     padding-left: 10%;
     padding-right: 10%;
@@ -62,14 +80,17 @@ body
     align-items: center;
     height: 100vh;
     position: relative;
-    font-family: 'Tangerine', cursive;
+    /* font-family: 'Tangerine', cursive; */
+    font-family: 'Poiret One', cursive;
     color: #252525;
     text-shadow: 0px 0px 2px rgb(175, 235, 232, 0.3) ;
     /* text-transform: uppercase; */
-    font-size: 45px;
+    font-size: 40px;
     line-height: 120%; 
     padding-left: 10%;
     padding-right: 10%;
+    /* padding-top: 10%;
+    padding: 10%; */
 }
 
 .section-quote
@@ -81,12 +102,14 @@ body
     width: 50%;
     position: relative;
     padding-bottom: 10%;
-    font-family: 'Tangerine', cursive;
+    /* font-family: 'Tangerine', cursive; */
+    font-family: 'Poiret One', cursive;
     color: #252525;
     text-shadow: 0px 0px 2px rgb(175, 235, 232, 0.3) ;
     /* text-transform: uppercase; */
-    font-size: 38px;
+    font-size: 32px;
     line-height: 40px; 
+    padding-top: 10%;
     padding-left: 10%;
     padding-right: 10%;
     transition: 2s;
@@ -127,7 +150,7 @@ body
   }
   
   .tooltip-title .tooltiptext-title {
-    opacity: 0;
+    opacity: 0.1;
     width: 800px;
     /* background-color: black; */
     color: rgb(0, 0, 0);
@@ -182,16 +205,40 @@ body
   }
 
   /* Desciption */
+  @keyframes glowingDesc {
+    0% {
+      /* background-color: rgba(175, 235, 232, .2); */
+      text-shadow: 0 0 10px rgba(21, 218, 208, 0.3);
+    }
+    25% {
+      /* background-color: rgba(175, 235, 232, .2); */
+      text-shadow: 0 0 10px rgba(21, 218, 208, 0.6);
+    }
+    50% {
+      /* background-color: rgba(175, 235, 232, .6); */
+      text-shadow: 0 0 30px rgba(21, 218, 208);
+    }
+    75% {
+      /* background-color: rgba(175, 235, 232, .2); */
+      text-shadow: 0 0 10px rgba(21, 218, 208, 0.6);
+    }
+
+    100% {
+      /* background-color: rgba(175, 235, 232, .2); */
+      text-shadow: 0 0 10px rgba(21, 218, 208, 0.3)
+    }
+  }
 
   .tooltip-desc {
     position: relative;
     display: inline-block;
-    text-shadow:  0px 0px 10px rgb(175, 235, 232);
+    animation: glowingDesc 3s infinite;
+    /* text-shadow:  0px 0px 10px rgb(175, 235, 232); */
     /* border-bottom: 1px dotted black; */
   }
   
   .tooltip-desc .tooltiptext-desc {
-    opacity: 0;
+    opacity: 0.1;
     width: 530px;
     /* background-color: black; */
     color: rgb(0, 0, 0);
@@ -204,7 +251,7 @@ body
     z-index: 1;
     top: 55px;
     right: -480px;
-    font-size: 28px;
+    font-size: 17px;
     line-height: 35px;
     letter-spacing: 1px;
     transition: 0.8s;
@@ -357,7 +404,36 @@ body
     to {opacity:1 ;}
   }
 
+/* linkedIn banner */
 
+.navbar {
+  overflow: hidden;
+  opacity: 0.2;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
+.navbar a {
+  float: right;
+  display: block;
+  color: #1ab1a4;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
+.navbar a:hover {
+  background: rgb(240, 22, 22);
+  color: black;
+}
 
+/* .navbar {
+  background: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+} */
