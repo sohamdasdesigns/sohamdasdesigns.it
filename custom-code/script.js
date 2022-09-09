@@ -4,30 +4,30 @@ import * as dat from 'lil-gui'
 import { WireframeGeometry } from 'three'
 import gsap from 'gsap'
 
-var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
-    },
-    any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
+// var isMobile = {
+//     Android: function() {
+//         return navigator.userAgent.match(/Android/i);
+//     },
+//     BlackBerry: function() {
+//         return navigator.userAgent.match(/BlackBerry/i);
+//     },
+//     iOS: function() {
+//         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+//     },
+//     Opera: function() {
+//         return navigator.userAgent.match(/Opera Mini/i);
+//     },
+//     Windows: function() {
+//         return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+//     },
+//     any: function() {
+//         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+//     }
+// };
 
-if( isMobile.any() ) {
-    console.log('mobile');
-};
+// if( isMobile.any() ) {
+//     console.log('mobile');
+// };
 
 
 /**
@@ -166,6 +166,11 @@ mesh2.position.x = 2
 mesh3.position.x = 2
 mesh4.position.x = 2
 mesh5.position.x = 2
+
+//is mobile
+if( window.innerWidth <= 768 ) {
+    mesh1.position.x = 0
+};
 
 mesh1.position.y = - objectsDistance * 0
 mesh6.position.y = - objectsDistance * 1
@@ -311,6 +316,12 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 //renderer.setClearAlpha(0)
 
+//Mobile Changes
+
+// let isMob = () => {
+//     mesh1.position.x = 0.2
+// }
+
 /**
  * Animate
  */
@@ -322,6 +333,23 @@ const tick = () =>
     const elapsedTime = clock.getElapsedTime()
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
+
+    //mobile Resposive
+    //is mobile
+    if( window.innerWidth <= 768 ) {
+        mesh1.position.x = .2;
+        mesh6.position.x = .2
+        mesh2.position.x = .2
+        mesh3.position.x = .2
+        mesh4.position.x = .2
+        mesh5.position.x = .2
+        //camera.position.z = 15
+        
+    };
+    if( window.innerWidth > 768 ) {
+        mesh1.position.x = 2
+    };
+
 
     // Animate meshes
     for(const mesh of sectionMeshes)

@@ -37,8 +37,26 @@
     <!-- Page Structure Elements -->
 
     <div id="footer--img">
-        <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/general/linkedin-logo.png" id="footers--img">
+        <a href="https://www.linkedin.com/in/sohamdasdesigns/" target="_blank">
+            <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/general/linkedin-logo.png" id="footers--img">
+        </a>
     </div>
+    <script>
+        window.onscroll = function(ev) {
+
+            console.log(window.scrollY)
+            // add this 
+            //if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            if (window.scrollY > 4500) {
+                document.getElementById("footers--img").style.opacity = 1.0;
+                document.getElementById("footers--img").style.animation = "glowingDesc2 3s infinite";
+            }
+            if (window.scrollY <= 4500) {
+                document.getElementById("footers--img").style.opacity = 0.2;
+            }
+        };
+    </script>
+    
     
     <section class="section-title">
         
@@ -50,10 +68,16 @@
             </div>
             <div class="tooltip-title">
                 <span class="tooltiptext-title">
-                    Why ~ Philosophy : To bring Function and Form together meaningfully
+                    <!-- Why ~ Philosophy : To bring Function and Form together meaningfully
                     <br> When & Where ~ Scope : Everyday, every aspect of Life and Livelihood
                     <br> How ~ Method : Problem Solving and Communication with Exploration (Science) and Expression (Art)
-                    <br> What ~ Production : To "Design the Forms" with the help of "Functions of Technology"
+                    <br> What ~ Production : To "Design the Forms" with the help of "Functions of Technology" -->
+
+                    - Creative Technology
+                    <br>- Creative Coding
+                    <br>- Physical Computing
+                    <br>- Interactive Art Installations
+                    <br>- Front-End Design & Development
                 </span>
             </div>
         </span>
@@ -71,22 +95,22 @@
                 
                 <span style="display: block; padding-top: 30px; padding-bottom: 20px; background-image: none;"> 
             <div class="tooltip" style=" padding-right: 3px; text-shadow:  0px 0px 10px rgb(175, 235, 232);">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/arduino_space.png"  width="80" height="80">  
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/arduino_space.png"  width="80" >  
                 <span class="tooltiptext">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/arduino_space.png"  width="500" height="500">
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/arduino_space.png"  width="400">
                 </span>
             </div>
             <div class="tooltip" style=" padding-right: 3px; text-shadow:  0px 0px 10px rgb(175, 235, 232);">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/la_chapel.png"  width="80" height="80">  
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/la_chapel.png"  width="80" >  
                 <span class="tooltiptext">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/la_chapel.png"  width="500" height="500">
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/la_chapel.png"  width="400" >
                 </span>
             </div>
 
             <div class="tooltip" style=" padding-right: 3px; text-shadow:  0px 0px 10px rgb(175, 235, 232);">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/arduino_space.png"  width="80" height="80">  
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/arduino_space.png"  width="80" >  
                 <span class="tooltiptext">
-                    <video width="500" height="500" autoplay muted controls>
+                    <video width="400" autoplay muted controls>
                         <source src="../static/bed/bed_arduino.mp4" type="video/mp4">
                         
                         Your browser does not support the video tag.
@@ -95,9 +119,9 @@
             </div>
 
             <div class="tooltip" style=" padding-right: 3px; text-shadow:  0px 0px 10px rgb(175, 235, 232);">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/la_chapel.png"  width="80" height="80">  
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bed/la_chapel.png"  width="80" >  
                 <span class="tooltiptext">
-                    <video width="500" height="500" autoplay muted controls>
+                    <video width="400" autoplay muted controls>
                         <source src="../static/bed/bed_chapel.mp4" type="video/mp4">
                         
                         Your browser does not support the video tag.
@@ -129,28 +153,28 @@
                 <span class="tooltiptext-desc">Works of <b>Electronic Rituals</b>, as a Assistant Creative Technologist, with amazing collaboration with Performance Art, Sound Design, Scenography, Videography & editing, Wood Curving and much more, to create the beautiful <b>depiction of Elementals of Nature and its innate spiritual connection with Human nature..</b>
                 <span style="display: block; padding-top: 30px; padding-bottom: 20px; background-image: none;"> 
             <div class="tooltip" style=" padding-right: 3px; text-shadow:  0px 0px 10px rgb(175, 235, 232);">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_1.png"  width="80" height="80">  
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_1.png"  width="80" >  
                 <span class="tooltiptext">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_1.png"  width="500" height="500">
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_1.png"  width="400">
                 </span>
             </div>
             <div class="tooltip" style=" padding-right: 3px; text-shadow:  0px 0px 10px rgb(175, 235, 232);">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_2.png"  width="80" height="80">  
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_2.png"  width="80" >  
                 <span class="tooltiptext">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_2.png"  width="500" height="500">
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_2.png"  width="400">
                 </span>
             </div>
             
             <div class="tooltip" style=" padding-right: 3px; text-shadow:  0px 0px 10px rgb(175, 235, 232);">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_3.png"  width="80" height="80">  
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_3.png"  width="80" >  
                 <span class="tooltiptext">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_3.png"  width="500" height="500">
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_3.png"  width="400">
                 </span>
             </div>
             <div class="tooltip" style=" padding-right: 3px; text-shadow:  0px 0px 10px rgb(175, 235, 232);">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_4.png"  width="80" height="80">  
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_4.png"  width="80" >  
                 <span class="tooltiptext">
-                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_4.png"  width="500" height="500">
+                <img src="https://raw.githubusercontent.com/sohamdasdesigns/sohamdasdesigns.it/main/static/bosco/bosco_4.png"  width="400">
                 </span>
             </div>
             </span>
@@ -201,7 +225,7 @@
 		    <h5>Domus Academy Milano, Italy</h5>
             <br>
             <div class="tooltip-desc"><h5>Description</h5>
-                <span class="tooltiptext-desc"> Inspired by the circles of hell, this <b>Digital Interactive Artwork</b> depicts the fictional context of a soul going through the time hell, portraying the mental pain of a person suffers in their conscience after self-reflection.
+                <span class="tooltiptext-desc"> Inspired by the circles of hell, this <b>Digital Interactive Artwork</b> depicts the fictional context of a soul going through the time in hell, portraying the psycological pains of a person experience in their conscience, after self-reflection.
                    
             <div style="padding-top: 20px;">
                 <button onclick="ttil()" class="ttil-button">Interactive Site</button>
