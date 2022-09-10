@@ -168,9 +168,9 @@ mesh4.position.x = 2
 mesh5.position.x = 2
 
 //is mobile
-if( window.innerWidth <= 768 ) {
-    mesh1.position.x = 0
-};
+// if( window.innerWidth <= 768 ) {
+//     mesh1.position.x = 0
+// };
 
 mesh1.position.y = - objectsDistance * 0
 mesh6.position.y = - objectsDistance * 1
@@ -322,7 +322,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 //     mesh1.position.x = 0.2
 // }
 
-/**
+/**fa
  * Animate
  */
 const clock = new THREE.Clock()
@@ -343,7 +343,8 @@ const tick = () =>
         mesh3.position.x = .2
         mesh4.position.x = .2
         mesh5.position.x = .2
-        //camera.position.z = 15
+        // camera.position.z = 0
+        //camera.lookAt(0, 0, 0)
         
     };
     if( window.innerWidth > 768 ) {
