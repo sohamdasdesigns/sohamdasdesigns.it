@@ -17,6 +17,21 @@ body
     
 }
 
+.not--desktop {
+  opacity: 0;
+  
+}
+
+
+@keyframes fadeOutAnimation {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
 #footer--img {
   position: fixed;
   /* display: flex; */
@@ -124,6 +139,76 @@ body
     padding-right: 10%;
     /* padding-top: 10%;
     padding: 10%; */
+}
+
+/* .projects--div {
+  padding: 10rem;
+  
+} */
+
+.projects {
+  font-family: 'Poiret One', cursive;
+  font-size: 4.0rem;
+  font-stretch: extra-expanded;
+  letter-spacing: 2rem;
+  font-weight: bold;
+  color: gray;
+  
+  /* position:relative; */
+  left:0;
+  top:0;
+  text-align:center;
+  padding-left: 11rem;
+
+  
+  /* top:30px; */
+  /* left: -10px; */
+  /* width : 150px;
+  height : 30px; */
+  position: absolute; /* not relative anymore */
+  /* z-index:5; It's already stacked above if positioned. Needed if other positioned elements are there (a value of 1 would be enough) */
+  transform: translate(-2rem, 3rem); /* replaces relative positioning (left and top => X and Y) */
+
+  opacity: 0.2;
+  transition: 4s;
+  
+  animation: fadeOutAnimationProjets ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  
+}
+
+.projects:hover {
+  /* opacity: 1; */
+  animation: fadeInAnimationProjets ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  
+  transition: 4s;
+}
+
+@keyframes fadeInAnimationProjets {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0.2;
+      letter-spacing: 50rem;
+      font-size: 1rem;
+  }
+  
+}
+
+@keyframes fadeOutAnimationProjets {
+  0% {
+    opacity: 0.2;
+    letter-spacing: 50rem;
+    font-size: 1rem;
+  }
+  100% {
+    opacity: 1;
+  }
+  
 }
 
 .section-quote
@@ -449,7 +534,29 @@ body
     background: rgb(243, 243, 243);
     font-size: 5.5px;
   }
+
+  .not--desktop {
+    display: flex;
+    padding: 4rem;
+  
+    animation: fadeOutAnimation ease 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+  }
+  
+  .not--desktop > img {
+    padding-right: 2rem;
+  }
+  
+  .not--desktop > h1 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 3.0rem;
+  }
+  
 }
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
