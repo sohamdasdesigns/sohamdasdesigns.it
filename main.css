@@ -380,6 +380,32 @@ body
     
   }
 
+  .tooltip-desc-credits .tooltiptext-desc-credits {
+    opacity: 0.1;
+    width: 53.0rem;
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
+    text-align: right;
+    border-radius: .6rem;
+    padding: .5rem 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 5.5rem;
+    right: -48.0rem;
+    font-size: 0rem;
+    line-height: 3.5rem;
+    letter-spacing: .1rem;
+    transition: 0.8s;
+  }
+  
+  .tooltip-desc-credits:hover .tooltiptext-desc-credits {
+    opacity: 1;
+    font-size: 1.2rem;
+    
+  }
+
   /* Description buttion for popup window */
 
   .getLife-button {
