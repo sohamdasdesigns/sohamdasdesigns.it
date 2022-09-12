@@ -167,11 +167,6 @@ mesh3.position.x = 2
 mesh4.position.x = 2
 mesh5.position.x = 2
 
-//is mobile
-// if( window.innerWidth <= 768 ) {
-//     mesh1.position.x = 0
-// };
-
 mesh1.position.y = - objectsDistance * 0
 mesh6.position.y = - objectsDistance * 1
 mesh2.position.y = - objectsDistance * 2
@@ -316,11 +311,6 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 //renderer.setClearAlpha(0)
 
-//Mobile Changes
-
-// let isMob = () => {
-//     mesh1.position.x = 0.2
-// }
 
 /**fa
  * Animate
@@ -333,24 +323,6 @@ const tick = () =>
     const elapsedTime = clock.getElapsedTime()
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
-
-    //mobile Resposive
-    //is mobile
-    if( window.innerWidth <= 768 ) {
-        mesh1.position.x = .2;
-        mesh6.position.x = .2
-        mesh2.position.x = .2
-        mesh3.position.x = .2
-        mesh4.position.x = .2
-        mesh5.position.x = .2
-        // camera.position.z = 0
-        //camera.lookAt(0, 0, 0)
-        
-    };
-    if( window.innerWidth > 768 ) {
-        mesh1.position.x = 2
-    };
-
 
     // Animate meshes
     for(const mesh of sectionMeshes)
@@ -367,6 +339,39 @@ const tick = () =>
     
     cameraGroup.position.x += (parallaxX - cameraGroup.position.x) * 5 * deltaTime
     cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 5 * deltaTime
+
+    if( window.innerWidth <= 900 ) {
+
+        material.color.setHex(0xaaaaaa)
+    
+        mesh1.position.x = -1;
+        mesh6.position.x = -1
+        mesh2.position.x = -0.9
+        mesh3.position.x = -1.1
+        mesh4.position.x = -0.8
+        mesh5.position.x = -1.1
+    
+        var mobObjDist = 8
+    
+        mesh1.position.y =  mobObjDist * 0.4
+        mesh6.position.y = - mobObjDist * 0.3
+        mesh2.position.y = - mobObjDist * 1.026
+        mesh3.position.y = - mobObjDist * 1.695
+        mesh4.position.y = - mobObjDist * 2.4
+        mesh5.position.y = - mobObjDist * 3.2
+    
+        // meshBackGround.position.x = - 3
+        // meshBackGround.position.y = - 20
+        // meshBackGround.position.z = 0
+        
+        camera.position.x = 0
+        camera.position.y = -10
+        camera.position.z = 20
+        //camera.lookAt(0, 0, 0)
+        
+        camera.position.y = - scrollY / sizes.height * 12
+        
+    };
 
     // Render
     renderer.render(scene, camera)

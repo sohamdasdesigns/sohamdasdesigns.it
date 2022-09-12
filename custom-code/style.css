@@ -172,6 +172,9 @@ body
   opacity: 0.2;
   transition: 4s;
   
+  animation: fadeOutAnimationProjets ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   
 }
 
@@ -181,21 +184,31 @@ body
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   
-  
+  transition: 4s;
 }
 
 @keyframes fadeInAnimationProjets {
   0% {
-      opacity: 0.2;
+      opacity: 1;
   }
   100% {
-      opacity: 1;
+      opacity: 0.2;
       letter-spacing: 50rem;
       font-size: 1rem;
   }
+  
+}
+
+@keyframes fadeOutAnimationProjets {
   0% {
+    opacity: 0.2;
+    letter-spacing: 50rem;
+    font-size: 1rem;
+  }
+  100% {
     opacity: 1;
   }
+  
 }
 
 .section-quote
@@ -364,6 +377,32 @@ body
   
   .tooltip-desc:hover .tooltiptext-desc {
     opacity: 1;
+    
+  }
+
+  .tooltip-desc-credits .tooltiptext-desc-credits {
+    opacity: 0.1;
+    width: 53.0rem;
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
+    text-align: right;
+    border-radius: .6rem;
+    padding: .5rem 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 5.5rem;
+    right: -48.0rem;
+    font-size: 0rem;
+    line-height: 3.5rem;
+    letter-spacing: .1rem;
+    transition: 0.8s;
+  }
+  
+  .tooltip-desc-credits:hover .tooltiptext-desc-credits {
+    opacity: 1;
+    font-size: 1.2rem;
     
   }
 
